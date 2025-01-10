@@ -1,6 +1,6 @@
 import pytest
 
-from linked_lists.forward_linked_list.linked_list import Node
+from single_dir_linked_list.node import Node
 
 
 @pytest.fixture()

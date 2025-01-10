@@ -3,8 +3,6 @@
 from collections.abc import Generator, Sequence
 from typing import Generic
 
-from linked_lists.forward_linked_list.iterator import LinkedListIterator
-
 from .node import Node, T
 
 
@@ -26,13 +24,6 @@ class LinkedList(Generic[T]):
             for item in other_container:
                 self.append(item)
 
-        self.advanced_iterator: LinkedListIterator[T] = LinkedListIterator()
-
-    # def iterator(
-    #     self, start_node: Node[T] | None, start: int, step: int
-    # ) -> LinkedListIterator[T]:
-    #     return self.advanced_iterator.__iter__(start_node, start, step)
-
     def __len__(self) -> int:
         """Length of Linked List.
 
@@ -53,7 +44,7 @@ class LinkedList(Generic[T]):
             and self.tail == other.tail
         )
 
-    def __iter__(self, start: int = 0, step: int = 1) -> "LinkedList[T]":
+    def __iter__(self) -> "LinkedList[T]":
         self.next_iterated_node = self.head
         return self
 
