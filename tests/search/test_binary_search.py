@@ -1,4 +1,3 @@
-
 import pytest
 
 from src.search.binary_search import binary_search
@@ -94,7 +93,6 @@ def test_binary_search_finds_last_element():
 def test_binary_search_multiple_occurrences():
     array = [1, 2, 2, 2, 3, 4, 5]
     find_element = 2
-    expected_index = 1  # Any index from 1 to 3 is correct
 
     result = binary_search(array, find_element)
     assert result in [1, 2, 3], f"Expected index 1, 2, or 3, but got {result}"

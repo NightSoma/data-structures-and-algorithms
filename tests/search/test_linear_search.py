@@ -1,4 +1,3 @@
-
 import pytest
 
 from src.search.linear_search import linear_search, linear_search_bool
