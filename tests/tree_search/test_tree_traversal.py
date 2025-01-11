@@ -10,6 +10,10 @@ from tree_search.tree_traversal import (
 
 @pytest.fixture
 def head() -> BinaryNode[int]:
+    """7
+        23      3
+    5    4  18   21
+    """
     return BinaryNode(
         7,
         BinaryNode(
@@ -25,12 +29,7 @@ def head() -> BinaryNode[int]:
     )
 
 
-#        7
-#   23      3
-# 5    4  18   21
-
-
-def test_pre_order_search__only_root(head: BinaryNode[int]):
+def test_pre_order_search__only_root():
     assert pre_order_search(BinaryNode(5, None, None)) == [5]
 
 

@@ -1,10 +1,8 @@
 import pytest
 
 from tree_search.binary_node import BinaryNode
-from tree_search.breadth_first_search import (
-    breadth_first_search,
-    breadth_first_search_traversal,
-)
+from tree_search.breadth_first_search import breadth_first_search
+from tree_search.breadth_first_search_traversal import breadth_first_search_traversal
 
 
 @pytest.fixture

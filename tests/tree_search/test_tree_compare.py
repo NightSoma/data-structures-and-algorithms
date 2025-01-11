@@ -54,11 +54,7 @@ def head_diff_value() -> BinaryNode[int]:
         BinaryNode(
             3,
             BinaryNode(18, None, None),
-            BinaryNode(
-                20,
-                None,
-                None
-            ),
+            BinaryNode(20, None, None),
         ),
     )
 
