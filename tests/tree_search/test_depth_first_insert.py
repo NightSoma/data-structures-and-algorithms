@@ -1,7 +1,7 @@
 import pytest
 
 from tree_search.binary_node import BinaryNode
-from tree_search.deapth_first_insert import deapth_first_insert
+from tree_search.depth_first_insert import depth_first_insert
 from tree_search.tree_compare import tree_compare
 
 
@@ -26,136 +26,136 @@ def head_full_tree() -> BinaryNode[int]:
     )
 
 
-def test_deapth_first_insert__insert_into_none_tree():
+def test_depth_first_insert__insert_into_none_tree():
     with pytest.raises(ValueError):
-        deapth_first_insert(None, 23)
+        depth_first_insert(None, 23)
 
 
-def test_deapth_first_insert__insert_23():
+def test_depth_first_insert__insert_23():
     correct_tree = BinaryNode(32)
     insert_tree = BinaryNode(32)
-    deapth_first_insert(insert_tree, 23)
+    depth_first_insert(insert_tree, 23)
     correct_tree.left = BinaryNode(23)
 
     assert tree_compare(insert_tree, correct_tree) is True
 
 
-def test_deapth_first_insert__insert_24():
+def test_depth_first_insert__insert_24():
     correct_tree = BinaryNode(32)
     insert_tree = BinaryNode(32)
 
-    deapth_first_insert(insert_tree, 23)
+    depth_first_insert(insert_tree, 23)
     correct_tree.left = BinaryNode(23)
 
-    deapth_first_insert(insert_tree, 24)
+    depth_first_insert(insert_tree, 24)
     assert correct_tree.left is not None
     correct_tree.left.right = BinaryNode(24)
 
     assert tree_compare(insert_tree, correct_tree) is True
 
 
-def test_deapth_first_insert__insert_34():
+def test_depth_first_insert__insert_34():
     correct_tree = BinaryNode(32)
     insert_tree = BinaryNode(32)
 
-    deapth_first_insert(insert_tree, 23)
+    depth_first_insert(insert_tree, 23)
     correct_tree.left = BinaryNode(23)
 
-    deapth_first_insert(insert_tree, 24)
+    depth_first_insert(insert_tree, 24)
     correct_tree.left.right = BinaryNode(24)
 
-    deapth_first_insert(insert_tree, 34)
+    depth_first_insert(insert_tree, 34)
     correct_tree.right = BinaryNode(34)
 
     assert tree_compare(insert_tree, correct_tree) is True
 
 
-def test_deapth_first_insert__insert_35():
+def test_depth_first_insert__insert_35():
     correct_tree = BinaryNode(32)
     insert_tree = BinaryNode(32)
 
-    deapth_first_insert(insert_tree, 23)
+    depth_first_insert(insert_tree, 23)
     correct_tree.left = BinaryNode(23)
 
-    deapth_first_insert(insert_tree, 24)
+    depth_first_insert(insert_tree, 24)
     correct_tree.left.right = BinaryNode(24)
 
-    deapth_first_insert(insert_tree, 34)
+    depth_first_insert(insert_tree, 34)
     correct_tree.right = BinaryNode(34)
 
-    deapth_first_insert(insert_tree, 35)
+    depth_first_insert(insert_tree, 35)
     correct_tree.right.right = BinaryNode(35)
 
     assert tree_compare(insert_tree, correct_tree) is True
 
 
-def test_deapth_first_insert__insert_33():
+def test_depth_first_insert__insert_33():
     correct_tree = BinaryNode(32)
     insert_tree = BinaryNode(32)
 
-    deapth_first_insert(insert_tree, 23)
+    depth_first_insert(insert_tree, 23)
     correct_tree.left = BinaryNode(23)
 
-    deapth_first_insert(insert_tree, 24)
+    depth_first_insert(insert_tree, 24)
     correct_tree.left.right = BinaryNode(24)
 
-    deapth_first_insert(insert_tree, 34)
+    depth_first_insert(insert_tree, 34)
     correct_tree.right = BinaryNode(34)
 
-    deapth_first_insert(insert_tree, 35)
+    depth_first_insert(insert_tree, 35)
     correct_tree.right.right = BinaryNode(35)
 
-    deapth_first_insert(insert_tree, 33)
+    depth_first_insert(insert_tree, 33)
     correct_tree.right.left = BinaryNode(33)
 
     assert tree_compare(insert_tree, correct_tree) is True
 
 
-def test_deapth_first_insert__insert_5():
+def test_depth_first_insert__insert_5():
     correct_tree = BinaryNode(32)
     insert_tree = BinaryNode(32)
 
-    deapth_first_insert(insert_tree, 23)
+    depth_first_insert(insert_tree, 23)
     correct_tree.left = BinaryNode(23)
 
-    deapth_first_insert(insert_tree, 24)
+    depth_first_insert(insert_tree, 24)
     correct_tree.left.right = BinaryNode(24)
 
-    deapth_first_insert(insert_tree, 34)
+    depth_first_insert(insert_tree, 34)
     correct_tree.right = BinaryNode(34)
 
-    deapth_first_insert(insert_tree, 35)
+    depth_first_insert(insert_tree, 35)
     correct_tree.right.right = BinaryNode(35)
 
-    deapth_first_insert(insert_tree, 33)
+    depth_first_insert(insert_tree, 33)
     correct_tree.right.left = BinaryNode(33)
 
-    deapth_first_insert(insert_tree, 5)
+    depth_first_insert(insert_tree, 5)
     correct_tree.left.left = BinaryNode(5)
 
     assert tree_compare(insert_tree, correct_tree) is True
 
 
-def test_deapth_first_insert__comapare_in_full(head_full_tree: BinaryNode[int]):
+def test_depth_first_insert__comapare_in_full(head_full_tree: BinaryNode[int]):
     correct_tree = BinaryNode(32)
     insert_tree = BinaryNode(32)
 
-    deapth_first_insert(insert_tree, 23)
+    depth_first_insert(insert_tree, 23)
     correct_tree.left = BinaryNode(23)
 
-    deapth_first_insert(insert_tree, 24)
+    depth_first_insert(insert_tree, 24)
     correct_tree.left.right = BinaryNode(24)
 
-    deapth_first_insert(insert_tree, 34)
+    depth_first_insert(insert_tree, 34)
     correct_tree.right = BinaryNode(34)
 
-    deapth_first_insert(insert_tree, 35)
+    depth_first_insert(insert_tree, 35)
     correct_tree.right.right = BinaryNode(35)
 
-    deapth_first_insert(insert_tree, 33)
+    depth_first_insert(insert_tree, 33)
     correct_tree.right.left = BinaryNode(33)
 
-    deapth_first_insert(insert_tree, 5)
+    depth_first_insert(insert_tree, 5)
     correct_tree.left.left = BinaryNode(5)
 
     assert tree_compare(insert_tree, head_full_tree) is True
