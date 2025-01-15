@@ -34,7 +34,6 @@ def runner_path_builder(
 
     if results:
         return min(results, key=lambda x: len(x))
-        # return [current_pos, *min(results, key=lambda x: len(x))]
 
     return []
 
@@ -90,10 +89,11 @@ def runner_backtracker(
         )
 
         if result:
+            result.append(current_pos)
             results.append(result)
 
     if results:
-        return [current_pos, *min(results, key=lambda x: len(x))]
+        return min(results, key=lambda x: len(x))
 
     return []
 
@@ -111,9 +111,13 @@ def maze_solver_back_tracker(
         if string_idx != -1:
             break
 
-    return runner_backtracker(
-        seen=seen,
-        maze=maze,
-        current_pos=(list_idx, string_idx),
-        end_tile=end_tile,
+    return list(
+        reversed(
+            runner_backtracker(
+                seen=seen,
+                maze=maze,
+                current_pos=(list_idx, string_idx),
+                end_tile=end_tile,
+            )
+        )
     )
