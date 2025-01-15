@@ -1,7 +1,7 @@
 [project]
-name = "prime-algo"
+name = "data-structures-and-algorithms"
 version = "0.1.0"
-description = "Add your description here"
+description = "Learning field."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = ["matplotlib>=3.10.0"]
@@ -76,7 +76,8 @@ ignore = [
     "D100", # Missing docstring in public moduleRuffD100
     "D101", # Missing docstring in public classRuffD101
     "D102", # Missing docstring in public methodRuffD102
-    "D104", # Missing docstring in public package
+    "D103", # Missing docstring in public functionRuffD103
+    "D104", # Missing docstring in public packageRuffD104
     "D105", # Missing docstring in magic methodRuffD105
     "D107", # Missing docstring in `__init__`RuffD107
 ]

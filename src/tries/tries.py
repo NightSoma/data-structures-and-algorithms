@@ -128,5 +128,4 @@ class Tries(Generic[T]):
         return not bool(self.dictionary)
 
     def clear(self) -> None:
-        """Removes all words from the Trie."""
         self.dictionary = {}
