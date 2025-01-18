@@ -1,6 +1,6 @@
 import pytest
 
-from double_linked_list.double_linked_list import DoubleLinkedList, DoubleNode
+from doubly_linked_list.double_linked_list import DoubleLinkedList, DoubleNode
 
 
 @pytest.fixture()

@@ -2,7 +2,7 @@ from typing import Any
 
 import pytest
 
-from double_linked_list.double_linked_list_tools import DoubleLinkedListTools
+from doubly_linked_list.double_linked_list_tools import DoubleLinkedListTools
 
 
 def test_validate_index__under_0_raises_error():
